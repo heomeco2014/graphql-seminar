@@ -5,9 +5,10 @@
 type User {
   id: Int!
   name: String!
-  projectOwner: User
-  client: String
-  budget: Float
+  email: String
+  password: String
+  timeFormat: String
+  avatar: String
 }
 
 type Project {
@@ -33,5 +34,5 @@ type Query {
 type Mutation {
   createProject(name: String!, projectOwner: String!, client: String!, budget: Int!): Project!
   createTeam(name: String!, teamOwner: String): Team!
-  createUser(username: String!, displayname: String): User!
+  createUser(name: String!, email: String): User!
 }

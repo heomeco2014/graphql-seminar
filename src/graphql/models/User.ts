@@ -10,11 +10,14 @@ export class User {
   name: string;
 
   @Field({ nullable: true })
-  projectOwner: User;
+  email: string;
 
   @Field({ nullable: true })
-  client: string;
+  password: string;
 
   @Field({ nullable: true })
-  budget: number;
+  timeFormat?: string;
+
+  @Field({ nullable: true })
+  avatar?: string;
 }
