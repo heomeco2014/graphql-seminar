@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: Int!
+  name: String!
+  projectOwner: User
+  client: String
+  budget: Float
+}
+
+type Project {
+  id: Int!
+  name: String!
+  projectOwner: String!
+  client: String!
+  budget: Int!
+}
+
+type Team {
+  id: Int!
+  name: String!
+  teamOwner: String
+}
+
+type Query {
+  getUser: User!
+  getUserById(id: Int!): User!
+  getUsers: [User!]!
+}
+
+type Mutation {
+  createProject(name: String!, projectOwner: String!, client: String!, budget: Int!): Project!
+  createTeam(name: String!, teamOwner: String): Team!
+  createUser(username: String!, displayname: String): User!
+}
