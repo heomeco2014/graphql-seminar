@@ -26,7 +26,10 @@ type Team {
 }
 
 type Query {
-  getUser: User!
+  getProjectById(id: Int!): Project!
+  getProjects: [Project!]!
+  getTeamById(id: Int!): Team!
+  getTeams: [Team!]!
   getUserById(id: Int!): User!
   getUsers: [User!]!
 }

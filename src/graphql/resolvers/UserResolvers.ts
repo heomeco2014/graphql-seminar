@@ -7,14 +7,6 @@ export let mockId = 4;
 @Resolver()
 export class UserResolver {
   @Query((returns) => User)
-  getUser() {
-    return {
-      id: 1,
-      username: 'test',
-      displayName: 'Test User',
-    };
-  }
-  @Query((returns) => User)
   getUserById(@Args('id', { type: () => Int }) id: number) {
     return mockUsers.find((user) => user.id === id);
   }
