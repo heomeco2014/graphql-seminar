@@ -4,8 +4,10 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    allowedHeaders: '*',
-    origin: '*',
+    origin: [
+      'https://graphql-seminar.onrender.com',
+      'https://studio.apollographql.com',
+    ],
     credentials: true,
   });
   await app.listen(3000);
